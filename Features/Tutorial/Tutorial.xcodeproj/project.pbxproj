@@ -7,17 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42064F3F28118AF500E18819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42064F3E28118AF500E18819 /* Assets.xcassets */; };
+		42064F4328118E7100E18819 /* TutorialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42064F4228118E7100E18819 /* TutorialModel.swift */; };
+		42064F4528118F2B00E18819 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42064F4428118F2A00E18819 /* TutorialView.swift */; };
 		42087929280EF9DF00940F3E /* Tutorial.docc in Sources */ = {isa = PBXBuildFile; fileRef = 42087928280EF9DF00940F3E /* Tutorial.docc */; };
 		4208792F280EF9DF00940F3E /* Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42087924280EF9DF00940F3E /* Tutorial.framework */; };
-		42087934280EF9DF00940F3E /* TestModular1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42087933280EF9DF00940F3E /* TestModular1Tests.swift */; };
 		42087935280EF9DF00940F3E /* Tutorial.h in Headers */ = {isa = PBXBuildFile; fileRef = 42087927280EF9DF00940F3E /* Tutorial.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4208794B280EFDB600940F3E /* TestModular1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208794A280EFDB600940F3E /* TestModular1.swift */; };
 		4208799D280F13FE00940F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208799C280F13FE00940F3E /* AppDelegate.swift */; };
 		4208799F280F13FE00940F3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208799E280F13FE00940F3E /* SceneDelegate.swift */; };
 		420879A1280F13FE00940F3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420879A0280F13FE00940F3E /* ViewController.swift */; };
 		420879A4280F13FE00940F3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420879A2280F13FE00940F3E /* Main.storyboard */; };
 		420879A6280F13FF00940F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420879A5280F13FF00940F3E /* Assets.xcassets */; };
 		420879A9280F13FF00940F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420879A7280F13FF00940F3E /* LaunchScreen.storyboard */; };
+		4238B6A7281199DB000CE01D /* TutorialPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6A6281199DB000CE01D /* TutorialPageView.swift */; };
+		4238B6A8281199E9000CE01D /* TutorialPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6A6281199DB000CE01D /* TutorialPageView.swift */; };
+		4238B6AD28119B80000CE01D /* TutorialUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6AC28119B80000CE01D /* TutorialUsecase.swift */; };
+		4238B6AE28119EE8000CE01D /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42064F4428118F2A00E18819 /* TutorialView.swift */; };
+		4238B6AF28119EEC000CE01D /* TutorialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42064F4228118E7100E18819 /* TutorialModel.swift */; };
+		4238B6B02811A045000CE01D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42064F3E28118AF500E18819 /* Assets.xcassets */; };
+		4238B6B22811A1CA000CE01D /* TutorialPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6B12811A1CA000CE01D /* TutorialPageViewModel.swift */; };
+		4238B6B32811A1CA000CE01D /* TutorialPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6B12811A1CA000CE01D /* TutorialPageViewModel.swift */; };
+		4238B6B52811A6B5000CE01D /* TutorialUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6AC28119B80000CE01D /* TutorialUsecase.swift */; };
+		4238B6B92811B27A000CE01D /* TutorialUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B6B82811B27A000CE01D /* TutorialUsecaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42064F3E28118AF500E18819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42064F4228118E7100E18819 /* TutorialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialModel.swift; sourceTree = "<group>"; };
+		42064F4428118F2A00E18819 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		42087924280EF9DF00940F3E /* Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42087927280EF9DF00940F3E /* Tutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
 		42087928280EF9DF00940F3E /* Tutorial.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Tutorial.docc; sourceTree = "<group>"; };
 		4208792E280EF9DF00940F3E /* TutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		42087933280EF9DF00940F3E /* TestModular1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModular1Tests.swift; sourceTree = "<group>"; };
-		4208794A280EFDB600940F3E /* TestModular1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModular1.swift; sourceTree = "<group>"; };
 		4208799A280F13FE00940F3E /* TutorialExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorialExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4208799C280F13FE00940F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4208799E280F13FE00940F3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +57,10 @@
 		420879A5280F13FF00940F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420879A8280F13FF00940F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		420879AA280F13FF00940F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4238B6A6281199DB000CE01D /* TutorialPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageView.swift; sourceTree = "<group>"; };
+		4238B6AC28119B80000CE01D /* TutorialUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialUsecase.swift; sourceTree = "<group>"; };
+		4238B6B12811A1CA000CE01D /* TutorialPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewModel.swift; sourceTree = "<group>"; };
+		4238B6B82811B27A000CE01D /* TutorialUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialUsecaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42064F4028118E5300E18819 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4238B6B12811A1CA000CE01D /* TutorialPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		42064F4128118E5E00E18819 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42064F4228118E7100E18819 /* TutorialModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4208791A280EF9DE00940F3E = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +128,12 @@
 		42087926280EF9DF00940F3E /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				42087949280EFD8800940F3E /* View */,
+				4238B6AB28119B49000CE01D /* Usecase */,
+				42064F4128118E5E00E18819 /* Model */,
+				4238B6A928119A86000CE01D /* Scene */,
 				42087927280EF9DF00940F3E /* Tutorial.h */,
 				42087928280EF9DF00940F3E /* Tutorial.docc */,
+				42064F3E28118AF500E18819 /* Assets.xcassets */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -106,7 +141,7 @@
 		42087932280EF9DF00940F3E /* TutorialTests */ = {
 			isa = PBXGroup;
 			children = (
-				42087933280EF9DF00940F3E /* TestModular1Tests.swift */,
+				4238B6B72811B254000CE01D /* Usecase */,
 			);
 			path = TutorialTests;
 			sourceTree = "<group>";
@@ -114,7 +149,8 @@
 		42087949280EFD8800940F3E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4208794A280EFDB600940F3E /* TestModular1.swift */,
+				4238B6A6281199DB000CE01D /* TutorialPageView.swift */,
+				42064F4428118F2A00E18819 /* TutorialView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +167,31 @@
 				420879AA280F13FF00940F3E /* Info.plist */,
 			);
 			path = TutorialExample;
+			sourceTree = "<group>";
+		};
+		4238B6A928119A86000CE01D /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				42064F4028118E5300E18819 /* ViewModel */,
+				42087949280EFD8800940F3E /* View */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		4238B6AB28119B49000CE01D /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				4238B6AC28119B80000CE01D /* TutorialUsecase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		4238B6B72811B254000CE01D /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				4238B6B82811B27A000CE01D /* TutorialUsecaseTests.swift */,
+			);
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +276,7 @@
 					};
 					4208792D280EF9DF00940F3E = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					42087999280F13FE00940F3E = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -246,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42064F3F28118AF500E18819 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +325,7 @@
 			files = (
 				420879A9280F13FF00940F3E /* LaunchScreen.storyboard in Resources */,
 				420879A6280F13FF00940F3E /* Assets.xcassets in Resources */,
+				4238B6B02811A045000CE01D /* Assets.xcassets in Resources */,
 				420879A4280F13FE00940F3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4208794B280EFDB600940F3E /* TestModular1.swift in Sources */,
+				42064F4528118F2B00E18819 /* TutorialView.swift in Sources */,
+				4238B6B22811A1CA000CE01D /* TutorialPageViewModel.swift in Sources */,
+				4238B6A7281199DB000CE01D /* TutorialPageView.swift in Sources */,
 				42087929280EF9DF00940F3E /* Tutorial.docc in Sources */,
+				4238B6AD28119B80000CE01D /* TutorialUsecase.swift in Sources */,
+				42064F4328118E7100E18819 /* TutorialModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42087934280EF9DF00940F3E /* TestModular1Tests.swift in Sources */,
+				4238B6B92811B27A000CE01D /* TutorialUsecaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4238B6B32811A1CA000CE01D /* TutorialPageViewModel.swift in Sources */,
 				420879A1280F13FE00940F3E /* ViewController.swift in Sources */,
 				4208799D280F13FE00940F3E /* AppDelegate.swift in Sources */,
 				4208799F280F13FE00940F3E /* SceneDelegate.swift in Sources */,
+				4238B6AE28119EE8000CE01D /* TutorialView.swift in Sources */,
+				4238B6B52811A6B5000CE01D /* TutorialUsecase.swift in Sources */,
+				4238B6A8281199E9000CE01D /* TutorialPageView.swift in Sources */,
+				4238B6AF28119EEC000CE01D /* TutorialModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -436,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -508,14 +581,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XZGYDU9AXB;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = p.TutorialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,10 +605,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XZGYDU9AXB;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = p.TutorialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,7 +639,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,7 +668,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,10 +10,7 @@ import Tutorial
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            let _ = print(TestModular1.callModular())
-        }
-        .background(Color.red)
+        Text("Content View")
     }
 }
 

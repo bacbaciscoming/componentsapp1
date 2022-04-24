@@ -10,9 +10,15 @@ import Combine
 
 class TutorialPageViewModel: ObservableObject {
     
+    enum State {
+        case idle
+        case loaded
+    }
+    
+    @Published var state: State = .idle
     @Published var pageIndex: Int = 0
     @Published var tutorials: [TutorialModel] = []
-    private let tutorialUsecase: TutorialUsecase = TutorialUsecaseImpl()
+    private let tutorialUsecase: GetTutorialUsecase = GetTutorialUsecaseImpl()
     private var anyCancellable: Set<AnyCancellable> = Set<AnyCancellable>()
     
     init() {
@@ -23,9 +29,22 @@ class TutorialPageViewModel: ObservableObject {
         self.tutorialUsecase.execute()
             .sink { _ in
             } receiveValue: { tutorials in
-                self.tutorials = tutorials
+                self.tutorials = self.setTag(tutorials: tutorials)
+                self.state = .loaded
         }
         .store(in: &self.anyCancellable)
+    }
+    
+    private func setTag( tutorials: [TutorialModel]) -> [TutorialModel] {
+        var tag: Int = 0
+        var newTutorials: [TutorialModel] = []
+        for tutorial in tutorials {
+            var newTutorial = tutorial
+            newTutorial.tag = tag
+            tag += 1
+            newTutorials.append(newTutorial)
+        }
+        return newTutorials
     }
     
     func increasePage() {

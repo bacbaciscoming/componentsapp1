@@ -1,0 +1,24 @@
+{
+    "code": 200,
+    "message": "Success",
+    "data": [
+        {
+            "id": "1",
+            "name": "name1",
+            "description": "description1",
+            "imageUrl": "work"
+        },
+        {
+            "id": "2",
+            "name": "name2",
+            "description": "description2",
+            "imageUrl": "cowork"
+        },
+        {
+            "id": null,
+            "name": "name3",
+            "description": "description3",
+            "imageUrl": "cowork"
+        }
+    ] 
+}

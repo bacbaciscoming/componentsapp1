@@ -23,6 +23,7 @@
 		42ED33752815125D003BA251 /* CodableJsonObjectToStringTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33722815125D003BA251 /* CodableJsonObjectToStringTransform.swift */; };
 		42ED337728151324003BA251 /* AnyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED337628151324003BA251 /* AnyKey.swift */; };
 		42ED33792815136C003BA251 /* CodableTransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33782815136C003BA251 /* CodableTransformType.swift */; };
+		42ED339028153682003BA251 /* TutorialResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 42ED338F28153682003BA251 /* TutorialResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		42ED33722815125D003BA251 /* CodableJsonObjectToStringTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableJsonObjectToStringTransform.swift; sourceTree = "<group>"; };
 		42ED337628151324003BA251 /* AnyKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKey.swift; sourceTree = "<group>"; };
 		42ED33782815136C003BA251 /* CodableTransformType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTransformType.swift; sourceTree = "<group>"; };
+		42ED338F28153682003BA251 /* TutorialResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TutorialResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		42ED333F28150E41003BA251 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				42ED338E2815366A003BA251 /* MockJsonResponse */,
 				42ED335A28150FF5003BA251 /* Extension */,
 				42ED336F2815123B003BA251 /* Utility */,
 				42ED334028150E41003BA251 /* Core.h */,
@@ -135,6 +138,14 @@
 				42ED33782815136C003BA251 /* CodableTransformType.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		42ED338E2815366A003BA251 /* MockJsonResponse */ = {
+			isa = PBXGroup;
+			children = (
+				42ED338F28153682003BA251 /* TutorialResponse.json */,
+			);
+			path = MockJsonResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42ED339028153682003BA251 /* TutorialResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +437,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = p.Core;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -456,7 +468,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = p.Core;
+				PRODUCT_BUNDLE_IDENTIFIER = com.p.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

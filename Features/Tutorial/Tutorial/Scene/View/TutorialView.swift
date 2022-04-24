@@ -13,7 +13,7 @@ struct TutorialView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Image("\(tutorial.imageUrl)")
+            Image("\(tutorial.imageUrl ?? "")")
                 .resizable()
                 .scaledToFit()
                 .padding()
@@ -23,11 +23,11 @@ struct TutorialView: View {
                 .padding()
             
             VStack {
-                Text(tutorial.name)
+                Text(tutorial.name ?? "")
                     .font(.title)
                     .lineLimit(1)
                 
-                Text(tutorial.description)
+                Text(tutorial.description ?? "")
                     .font(.subheadline)
                     .lineLimit(3)
             }
@@ -38,9 +38,9 @@ struct TutorialView: View {
 
 struct TutorialView_Previews: PreviewProvider {
     static var previews: some View {
-        TutorialView(tutorial: TutorialModel(name: "name",
+        TutorialView(tutorial: TutorialModel(id: "1",
+                                             name: "name",
                                              description: "description",
-                                             imageUrl: "work",
-                                             tag: 0))
+                                             imageUrl: "work"))
     }
 }

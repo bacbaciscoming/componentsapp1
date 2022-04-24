@@ -17,31 +17,38 @@ struct TutorialPageView: View {
     }
     
     var body: some View {
-        TabView(selection: $viewModel.pageIndex) {
-            ForEach(viewModel.tutorials) { tutorial in
-                VStack {
-                    Spacer()
-                    TutorialView(tutorial: tutorial)
-                    Spacer()
-                    if tutorial == self.viewModel.tutorials.last {
-                        Button("Understand",
-                               action: self.viewModel.goToZero)
-                            .buttonStyle(.bordered)
-                    } else {
-                        Button("Next",
-                               action: self.viewModel.increasePage)
+        ZStack {
+            switch self.viewModel.state {
+            case .idle:
+                EmptyView()
+            case .loaded:
+                TabView(selection: $viewModel.pageIndex) {
+                    ForEach(viewModel.tutorials, id: \.self) { tutorial in
+                        VStack {
+                            Spacer()
+                            TutorialView(tutorial: tutorial)
+                            Spacer()
+                            if tutorial == self.viewModel.tutorials.last {
+                                Button("Understand",
+                                       action: self.viewModel.goToZero)
+                                    .buttonStyle(.bordered)
+                            } else {
+                                Button("Next",
+                                       action: self.viewModel.increasePage)
+                            }
+                            Spacer()
+                        }
+                        .tag(tutorial.tag)
                     }
-                    Spacer()
                 }
-                .tag(tutorial.tag)
+                .animation(.easeOut, value: self.viewModel.pageIndex)
+                .tabViewStyle(.page)
+                .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+                .onAppear {
+                    self.dotApperance.currentPageIndicatorTintColor = .black
+                    self.dotApperance.pageIndicatorTintColor = .gray
+                }
             }
-        }
-        .animation(.easeOut, value: self.viewModel.pageIndex)
-        .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .interactive))
-        .onAppear {
-            self.dotApperance.currentPageIndicatorTintColor = .black
-            self.dotApperance.pageIndicatorTintColor = .gray
         }
     }
 }

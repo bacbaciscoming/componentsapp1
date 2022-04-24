@@ -10,7 +10,6 @@
 		42064F3F28118AF500E18819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42064F3E28118AF500E18819 /* Assets.xcassets */; };
 		42064F4328118E7100E18819 /* TutorialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42064F4228118E7100E18819 /* TutorialModel.swift */; };
 		42064F4528118F2B00E18819 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42064F4428118F2A00E18819 /* TutorialView.swift */; };
-		42087929280EF9DF00940F3E /* Tutorial.docc in Sources */ = {isa = PBXBuildFile; fileRef = 42087928280EF9DF00940F3E /* Tutorial.docc */; };
 		4208792F280EF9DF00940F3E /* Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42087924280EF9DF00940F3E /* Tutorial.framework */; };
 		42087935280EF9DF00940F3E /* Tutorial.h in Headers */ = {isa = PBXBuildFile; fileRef = 42087927280EF9DF00940F3E /* Tutorial.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4208799D280F13FE00940F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4208799C280F13FE00940F3E /* AppDelegate.swift */; };
@@ -47,7 +46,6 @@
 		42064F4428118F2A00E18819 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		42087924280EF9DF00940F3E /* Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42087927280EF9DF00940F3E /* Tutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
-		42087928280EF9DF00940F3E /* Tutorial.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Tutorial.docc; sourceTree = "<group>"; };
 		4208792E280EF9DF00940F3E /* TutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4208799A280F13FE00940F3E /* TutorialExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorialExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4208799C280F13FE00940F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				42064F4128118E5E00E18819 /* Model */,
 				4238B6A928119A86000CE01D /* Scene */,
 				42087927280EF9DF00940F3E /* Tutorial.h */,
-				42087928280EF9DF00940F3E /* Tutorial.docc */,
 				42064F3E28118AF500E18819 /* Assets.xcassets */,
 			);
 			path = Tutorial;
@@ -340,7 +337,6 @@
 				42064F4528118F2B00E18819 /* TutorialView.swift in Sources */,
 				4238B6B22811A1CA000CE01D /* TutorialPageViewModel.swift in Sources */,
 				4238B6A7281199DB000CE01D /* TutorialPageView.swift in Sources */,
-				42087929280EF9DF00940F3E /* Tutorial.docc in Sources */,
 				4238B6AD28119B80000CE01D /* TutorialUsecase.swift in Sources */,
 				42064F4328118E7100E18819 /* TutorialModel.swift in Sources */,
 			);

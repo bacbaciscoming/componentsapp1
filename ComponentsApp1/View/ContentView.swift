@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Tutorial
 
 struct ContentView: View {
     var body: some View {

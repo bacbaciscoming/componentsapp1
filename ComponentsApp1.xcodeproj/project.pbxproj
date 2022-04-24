@@ -22,6 +22,8 @@
 		42B4949428104EBF0046C2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B4949328104EBF0046C2EE /* GoogleService-Info.plist */; };
 		42B494972810504F0046C2EE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 42B494962810504F0046C2EE /* FirebaseAnalytics */; };
 		42B494992810504F0046C2EE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 42B494982810504F0046C2EE /* FirebaseAuth */; };
+		42ED335628150E83003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; };
+		42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93F2B177191245B984AE627F /* Pods_ComponentsApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F4B7E017B4EAEF70D970BA /* Pods_ComponentsApp1.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */,
+				42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +78,7 @@
 		420878F3280EF61F00940F3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4208793F280EFB5700940F3E /* Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B4949328104EBF0046C2EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42ED335528150E83003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB16D1925350708023329685 /* Pods-ComponentsApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsApp1.release.xcconfig"; path = "Target Support Files/Pods-ComponentsApp1/Pods-ComponentsApp1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 				42087944280EFBD700940F3E /* Tutorial.framework in Frameworks */,
 				93F2B177191245B984AE627F /* Pods_ComponentsApp1.framework in Frameworks */,
 				42B494972810504F0046C2EE /* FirebaseAnalytics in Frameworks */,
+				42ED335628150E83003BA251 /* Core.framework in Frameworks */,
 				42B494992810504F0046C2EE /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +187,7 @@
 		4208793E280EFB5700940F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42ED335528150E83003BA251 /* Core.framework */,
 				4208793F280EFB5700940F3E /* Tutorial.framework */,
 				08F4B7E017B4EAEF70D970BA /* Pods_ComponentsApp1.framework */,
 			);

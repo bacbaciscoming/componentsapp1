@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if !TESTING
 struct TutorialPageView: View {
     
     @ObservedObject private var viewModel: TutorialPageViewModel
@@ -30,7 +31,7 @@ struct TutorialPageView: View {
                             Spacer()
                             if tutorial == self.viewModel.tutorials.last {
                                 Button("Understand",
-                                       action: self.viewModel.goToZero)
+                                       action: self.viewModel.resetPage)
                                     .buttonStyle(.bordered)
                             } else {
                                 Button("Next",
@@ -58,3 +59,4 @@ struct TutorialPageView_Previews: PreviewProvider {
         TutorialPageView(viewModel: TutorialPageViewModel())
     }
 }
+#endif

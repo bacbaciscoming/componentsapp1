@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if !TESTING
 struct TutorialView: View {
     
     var tutorial: TutorialModel
@@ -44,3 +45,4 @@ struct TutorialView_Previews: PreviewProvider {
                                              imageUrl: "work"))
     }
 }
+#endif

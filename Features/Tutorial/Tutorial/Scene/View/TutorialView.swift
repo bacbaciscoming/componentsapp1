@@ -5,16 +5,16 @@
 //  Created by Phittaya Wongsuwan on 21/4/2565 BE.
 //
 
+#if !TESTING
 import SwiftUI
 
-#if !TESTING
 struct TutorialView: View {
     
     var tutorial: TutorialModel
 
     var body: some View {
         VStack(spacing: 20) {
-            Image("\(tutorial.imageUrl ?? "")")
+            Image(uiImage: self.getImage())
                 .resizable()
                 .scaledToFit()
                 .padding()
@@ -35,6 +35,14 @@ struct TutorialView: View {
             .frame(width: 300)
         }
     }
+    
+    private func getImage() -> UIImage {
+        guard let imageUrl = self.tutorial.imageUrl,
+                let rawImageAsset = RawImageAsset(rawValue: imageUrl) else {
+            return UIImage()
+        }
+        return ImageAsset.load(rawImageAsset)
+    }
 }
 
 struct TutorialView_Previews: PreviewProvider {
@@ -46,3 +54,5 @@ struct TutorialView_Previews: PreviewProvider {
     }
 }
 #endif
+
+

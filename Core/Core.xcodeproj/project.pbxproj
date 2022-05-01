@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42CA3F3E281E80E90006EF9C /* BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F3D281E80E90006EF9C /* BundleIdentifier.swift */; };
 		42ED334628150E41003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED333D28150E41003BA251 /* Core.framework */; };
 		42ED334B28150E41003BA251 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED334A28150E41003BA251 /* CoreTests.swift */; };
 		42ED334C28150E41003BA251 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 42ED334028150E41003BA251 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42CA3F3D281E80E90006EF9C /* BundleIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleIdentifier.swift; sourceTree = "<group>"; };
 		42ED333D28150E41003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED334028150E41003BA251 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		42ED334528150E41003BA251 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42CA3F3C281E80D60006EF9C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				42CA3F3D281E80E90006EF9C /* BundleIdentifier.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		42ED333328150E41003BA251 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				42ED338E2815366A003BA251 /* MockJsonResponse */,
+				42CA3F3C281E80D60006EF9C /* Enum */,
 				42ED335A28150FF5003BA251 /* Extension */,
 				42ED336F2815123B003BA251 /* Utility */,
 				42ED334028150E41003BA251 /* Core.h */,
@@ -261,6 +272,7 @@
 			files = (
 				42ED33732815125D003BA251 /* CodableJsonObjectToAnyStringTransform.swift in Sources */,
 				42ED336A281511E5003BA251 /* Codable+Extension.swift in Sources */,
+				42CA3F3E281E80E90006EF9C /* BundleIdentifier.swift in Sources */,
 				42ED336B281511E5003BA251 /* Encodable+Extension.swift in Sources */,
 				42ED3368281511E5003BA251 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				42ED3365281511E5003BA251 /* Encoder+Extension.swift in Sources */,

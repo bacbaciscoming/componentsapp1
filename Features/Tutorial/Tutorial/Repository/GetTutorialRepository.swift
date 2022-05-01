@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Core
 
 public protocol GetTutorialRepository {
     func getTutorial() -> AnyPublisher<[TutorialModel]?, Error>
@@ -19,7 +20,7 @@ public final class GetTutorialRepositoryImpl: GetTutorialRepository {
     public func getTutorial() -> AnyPublisher<[TutorialModel]?, Error> {
         return Future<[TutorialModel]?, Error> { promise in
             do {
-                if let bundlePath = Bundle(identifier: "com.p.Core")?.path(forResource: "TutorialResponse",
+                if let bundlePath = Bundle(identifier: BundleIdentifier.core.rawValue)?.path(forResource: "TutorialResponse",
                                                      ofType: "json"),
                     let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                     let response = try JSONDecoder().decode(TutorialResponse.self, from: jsonData)

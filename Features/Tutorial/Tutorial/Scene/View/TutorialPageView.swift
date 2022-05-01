@@ -5,9 +5,9 @@
 //  Created by Phittaya Wongsuwan on 21/4/2565 BE.
 //
 
+#if !TESTING
 import SwiftUI
 
-#if !TESTING
 struct TutorialPageView: View {
     
     @ObservedObject private var viewModel: TutorialPageViewModel

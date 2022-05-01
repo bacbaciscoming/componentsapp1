@@ -23,10 +23,35 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Testing"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "42ED333C28150E41003BA251"
+            BuildableName = "Core.framework"
+            BlueprintName = "Core"
+            ReferencedContainer = "container:Core/Core.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "42087923280EF9DF00940F3E"
+            BuildableName = "Tutorial.framework"
+            BlueprintName = "Tutorial"
+            ReferencedContainer = "container:Features/Tutorial/Tutorial.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "420878BE280EF37F00940F3E"
+            BuildableName = "ComponentsApp1.app"
+            BlueprintName = "ComponentsApp1"
+            ReferencedContainer = "container:ComponentsApp1.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -39,13 +64,33 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "420878DE280EF38000940F3E"
                BuildableName = "ComponentsApp1UITests.xctest"
                BlueprintName = "ComponentsApp1UITests"
                ReferencedContainer = "container:ComponentsApp1.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "42ED334428150E41003BA251"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:Core/Core.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4208792D280EF9DF00940F3E"
+               BuildableName = "TutorialTests.xctest"
+               BlueprintName = "TutorialTests"
+               ReferencedContainer = "container:Features/Tutorial/Tutorial.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

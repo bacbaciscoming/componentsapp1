@@ -22,15 +22,7 @@ platform :ios do
   end
 
   desc "Build application and export ipa"
-  lane :build do
-    gym(scheme: "ComponentsApp1",
-        export_options: {
-          method: "ad-hoc",
-          provisioningProfiles: {
-            "com.p.ComponentsApp1" => "Phittaya Wongsuwan"
-          }
-        },
-        output_directory: "./ipa",
-        output_name: "ComponentsApp1.ipa")
+  lane :tests do
+    run_tests(scheme: "ComponentsApp1")
   end
 end

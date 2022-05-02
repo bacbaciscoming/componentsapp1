@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public class CodableJsonObjectToStringTransform: CodableTransformType {
     public typealias Object = String
     public typealias JSON = Any

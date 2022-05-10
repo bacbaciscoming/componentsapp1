@@ -1,5 +1,5 @@
 //
-//  CustomTabBar.swift
+//  CustomTabBarView.swift
 //  ComponentsApp1
 //
 //  Created by Phittaya Wongsuwan on 2/5/2565 BE.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomTabBar: View {
+struct CustomTabBarView: View {
     
     @Binding var currentTab: Tab
     // MARK: To Animate Like Curve
@@ -26,15 +26,20 @@ struct CustomTabBar: View {
                             yOffset = 0
                         }
                     } label: {
-                        Image(tab.rawValue)
-                            .renderingMode(.template)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 30, height: 30)
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(currentTab == tab ? .purple : .gray)
-                        // MARK: Little Scaling Effect
-                            .scaleEffect(currentTab == tab && yOffset != 0 ? 1.5 : 1)
+                        VStack {
+                            Image(tab.rawValue)
+                                .renderingMode(.template)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(currentTab == tab ? Color("Accent") : Color("Secondary"))
+                            // MARK: Little Scaling Effect
+                                .scaleEffect(currentTab == tab && yOffset != 0 ? 1.5 : 1)
+                            Text(tab.rawValue)
+                                .font(.footnote)
+                                .foregroundColor(currentTab == tab ? Color("Accent") : Color("Secondary"))
+                        } 
                     }
                 }
             }
@@ -77,8 +82,8 @@ struct CustomTabBar: View {
     }
 }
 
-struct CustomTabBar_Previews: PreviewProvider {
+struct CustomTabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        CustomTabBarView(currentTab: .constant(Tab.home))
     }
 }

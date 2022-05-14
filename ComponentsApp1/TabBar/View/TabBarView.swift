@@ -5,12 +5,17 @@
 //  Created by Phittaya Wongsuwan on 24/4/2565 BE.
 //
 
+#if !TESTING
 import SwiftUI
+import Tutorial
+import Core
+import Data
 
 struct TabBarView: View {
     
-    @State var currentTab: Tab = .home
+    @EnvironmentObject var viewlaunchModel: ViewLaunchModel
     @Environment(\.colorScheme) var scheme
+    @State var currentTab: Tab = .home
     
     // animate Splash
     @State var animate: Bool = false
@@ -23,19 +28,23 @@ struct TabBarView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                TabView(selection: $currentTab) {
-                    Text("Home")
-                        .tag(Tab.home)
-                    Text("Search")
-                        .tag(Tab.search)
-                    Text("Like")
-                        .tag(Tab.like)
-                    Text("Profile")
-                        .tag(Tab.profile)
-                    Text("Setting")
-                        .tag(Tab.setting)
+                if self.viewlaunchModel.currentPage == .tutorial {
+                    TutorialPageView(viewModel: TutorialPageViewModel())
+                } else if self.viewlaunchModel.currentPage == .tabBar {
+                    TabView(selection: $currentTab) {
+                        Text("Home")
+                            .tag(Tab.home)
+                        Text("Search")
+                            .tag(Tab.search)
+                        Text("Like")
+                            .tag(Tab.like)
+                        Text("Profile")
+                            .tag(Tab.profile)
+                        Text("Setting")
+                            .tag(Tab.setting)
+                    }
+                    CustomTabBarView(currentTab: $currentTab)
                 }
-                CustomTabBarView(currentTab: $currentTab)
             }
             .applyDominantColor()
             
@@ -82,3 +91,6 @@ struct TabView_Previews: PreviewProvider {
         TabBarView()
     }
 }
+#endif
+
+

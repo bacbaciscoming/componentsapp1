@@ -32,13 +32,6 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "42ED333C28150E41003BA251"
-            BuildableName = "Core.framework"
-            BlueprintName = "Core"
-            ReferencedContainer = "container:Core/Core.xcodeproj">
-         </BuildableReference>
-         <BuildableReference
-            BuildableIdentifier = "primary"
             BlueprintIdentifier = "42087923280EF9DF00940F3E"
             BuildableName = "Tutorial.framework"
             BlueprintName = "Tutorial"
@@ -50,6 +43,20 @@
             BuildableName = "ComponentsApp1.app"
             BlueprintName = "ComponentsApp1"
             ReferencedContainer = "container:ComponentsApp1.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "42F685A3282FF3FD004F8342"
+            BuildableName = "Data.framework"
+            BlueprintName = "Data"
+            ReferencedContainer = "container:Share/Data/Data.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "42ED333C28150E41003BA251"
+            BuildableName = "Core.framework"
+            BlueprintName = "Core"
+            ReferencedContainer = "container:Share/Core/Core.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -77,20 +84,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "42ED334428150E41003BA251"
-               BuildableName = "CoreTests.xctest"
-               BlueprintName = "CoreTests"
-               ReferencedContainer = "container:Core/Core.xcodeproj">
+               BlueprintIdentifier = "4208792D280EF9DF00940F3E"
+               BuildableName = "TutorialTests.xctest"
+               BlueprintName = "TutorialTests"
+               ReferencedContainer = "container:Features/Tutorial/Tutorial.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4208792D280EF9DF00940F3E"
-               BuildableName = "TutorialTests.xctest"
-               BlueprintName = "TutorialTests"
-               ReferencedContainer = "container:Features/Tutorial/Tutorial.xcodeproj">
+               BlueprintIdentifier = "42ED334428150E41003BA251"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:Share/Core/Core.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "42F685AB282FF3FD004F8342"
+               BuildableName = "DataTests.xctest"
+               BlueprintName = "DataTests"
+               ReferencedContainer = "container:Share/Data/Data.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

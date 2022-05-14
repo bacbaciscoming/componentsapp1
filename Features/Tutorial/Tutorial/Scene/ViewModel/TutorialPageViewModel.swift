@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class TutorialPageViewModel: ObservableObject {
+public class TutorialPageViewModel: ObservableObject {
     
     enum State {
         case idle
@@ -21,7 +21,7 @@ class TutorialPageViewModel: ObservableObject {
     private let tutorialUsecase: GetTutorialUsecase
     private var anyCancellable: Set<AnyCancellable> = Set<AnyCancellable>()
     
-    init(tutorialUsecase: GetTutorialUsecase = GetTutorialUsecaseImpl()) {
+    public init(tutorialUsecase: GetTutorialUsecase = GetTutorialUsecaseImpl()) {
         self.tutorialUsecase = tutorialUsecase
         self.getTutorial()
     }
@@ -50,9 +50,5 @@ class TutorialPageViewModel: ObservableObject {
     
     func increasePage() {
         self.pageIndex += 1
-    }
-    
-    func resetPage() {
-        self.pageIndex = 0
     }
 }

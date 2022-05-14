@@ -21,10 +21,11 @@
 		42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */; };
 		42CA3F4C281FC3360006EF9C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F4B281FC3360006EF9C /* Tab.swift */; };
 		42CA3F51281FC7810006EF9C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F50281FC7810006EF9C /* CustomTabBar.swift */; };
-		42CA3F5B2820242E0006EF9C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F5A2820242E0006EF9C /* View+Extension.swift */; };
 		42ED335628150E83003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; };
 		42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42ED339828158F11003BA251 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED339728158F11003BA251 /* TabBarView.swift */; };
+		42F685BD282FF42B004F8342 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685BC282FF42B004F8342 /* Data.framework */; };
+		42F685BE282FF42B004F8342 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685BC282FF42B004F8342 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				42F685BE282FF42B004F8342 /* Data.framework in Embed Frameworks */,
 				42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */,
 				42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */,
 			);
@@ -77,9 +79,9 @@
 		42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ComponentsApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CA3F4B281FC3360006EF9C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		42CA3F50281FC7810006EF9C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
-		42CA3F5A2820242E0006EF9C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		42ED335528150E83003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED339728158F11003BA251 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		42F685BC282FF42B004F8342 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32B24BE63928B5725891674 /* Pods-ComponentsApp1.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsApp1.testing.xcconfig"; path = "Target Support Files/Pods-ComponentsApp1/Pods-ComponentsApp1.testing.xcconfig"; sourceTree = "<group>"; };
 		DB16D1925350708023329685 /* Pods-ComponentsApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsApp1.release.xcconfig"; path = "Target Support Files/Pods-ComponentsApp1/Pods-ComponentsApp1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F685BD282FF42B004F8342 /* Data.framework in Frameworks */,
 				42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */,
 				42087944280EFBD700940F3E /* Tutorial.framework in Frameworks */,
 				42B494972810504F0046C2EE /* FirebaseAnalytics in Frameworks */,
@@ -149,7 +152,6 @@
 		420878C1280EF37F00940F3E /* ComponentsApp1 */ = {
 			isa = PBXGroup;
 			children = (
-				42CA3F59282024180006EF9C /* Extension */,
 				42CA3F4D281FC6370006EF9C /* TabBar */,
 				42CA3F5628201B2F0006EF9C /* Resource */,
 				420878C2280EF37F00940F3E /* AppDelegate.swift */,
@@ -189,6 +191,7 @@
 		4208793E280EFB5700940F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42F685BC282FF42B004F8342 /* Data.framework */,
 				42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */,
 				42ED335528150E83003BA251 /* Core.framework */,
 				4208793F280EFB5700940F3E /* Tutorial.framework */,
@@ -220,14 +223,6 @@
 				420878CB280EF38000940F3E /* Assets.xcassets */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		42CA3F59282024180006EF9C /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				42CA3F5A2820242E0006EF9C /* View+Extension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42ED339828158F11003BA251 /* TabBarView.swift in Sources */,
-				42CA3F5B2820242E0006EF9C /* View+Extension.swift in Sources */,
 				420878C3280EF37F00940F3E /* AppDelegate.swift in Sources */,
 				42CA3F51281FC7810006EF9C /* CustomTabBar.swift in Sources */,
 				42CA3F4C281FC3360006EF9C /* Tab.swift in Sources */,

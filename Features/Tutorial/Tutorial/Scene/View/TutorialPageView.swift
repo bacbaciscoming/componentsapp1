@@ -7,18 +7,22 @@
 
 #if !TESTING
 import SwiftUI
+import Data
+import Core
 
-struct TutorialPageView: View {
+public struct TutorialPageView: View {
     
+    @EnvironmentObject var viewlaunchModel: ViewLaunchModel
     @ObservedObject private var viewModel: TutorialPageViewModel
     private let dotApperance = UIPageControl.appearance()
     
-    init(viewModel: TutorialPageViewModel) {
+    public init(viewModel: TutorialPageViewModel) {
         self.viewModel = viewModel
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
+            Color.clear
             switch self.viewModel.state {
             case .idle:
                 EmptyView()
@@ -30,9 +34,13 @@ struct TutorialPageView: View {
                             TutorialView(tutorial: tutorial)
                             Spacer()
                             if tutorial == self.viewModel.tutorials.last {
-                                Button("Understand",
-                                       action: self.viewModel.resetPage)
-                                    .buttonStyle(.bordered)
+                                Button("Understand", action: {
+                                    UserDefaultsKey.LaunchBefore.set(value: true)
+                                    withAnimation(){
+                                        self.viewlaunchModel.currentPage = .tabBar
+                                    }
+                                })
+                                .buttonStyle(.bordered)
                             } else {
                                 Button("Next",
                                        action: self.viewModel.increasePage)

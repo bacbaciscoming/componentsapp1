@@ -5,6 +5,7 @@
 //  Created by Phittaya Wongsuwan on 2/5/2565 BE.
 //
 
+#if !TESTING
 import SwiftUI
 
 struct CustomTabBarView: View {
@@ -87,3 +88,4 @@ struct CustomTabBarView_Previews: PreviewProvider {
         CustomTabBarView(currentTab: .constant(Tab.home))
     }
 }
+#endif

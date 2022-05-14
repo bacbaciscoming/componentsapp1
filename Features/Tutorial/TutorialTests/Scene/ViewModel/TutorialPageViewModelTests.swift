@@ -40,13 +40,4 @@ class TutorialPageViewModelTests: XCTestCase {
         sut.increasePage()
         XCTAssertEqual(sut.pageIndex, 1)
     }
-    
-    func test_resetPage_ShouldSuccess() {
-        let expect: [TutorialModel] = []
-        spy.stubbedExecuteResult = Just(expect)
-            .eraseToAnyPublisher()
-        sut = TutorialPageViewModel(tutorialUsecase: spy)
-        sut.resetPage()
-        XCTAssertEqual(sut.pageIndex, 0)
-    }
 }

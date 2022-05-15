@@ -16,8 +16,6 @@
 		42087944280EFBD700940F3E /* Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4208793F280EFB5700940F3E /* Tutorial.framework */; };
 		42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4208793F280EFB5700940F3E /* Tutorial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42B4949428104EBF0046C2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B4949328104EBF0046C2EE /* GoogleService-Info.plist */; };
-		42B494972810504F0046C2EE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 42B494962810504F0046C2EE /* FirebaseAnalytics */; };
-		42B494992810504F0046C2EE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 42B494982810504F0046C2EE /* FirebaseAuth */; };
 		42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */; };
 		42CA3F4C281FC3360006EF9C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F4B281FC3360006EF9C /* Tab.swift */; };
 		42CA3F51281FC7810006EF9C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F50281FC7810006EF9C /* CustomTabBar.swift */; };
@@ -26,6 +24,8 @@
 		42ED339828158F11003BA251 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED339728158F11003BA251 /* TabBarView.swift */; };
 		42F685BD282FF42B004F8342 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685BC282FF42B004F8342 /* Data.framework */; };
 		42F685BE282FF42B004F8342 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685BC282FF42B004F8342 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		42F6862A28313754004F8342 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F6862928313754004F8342 /* Login.framework */; };
+		42F6862B28313754004F8342 /* Login.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42F6862928313754004F8342 /* Login.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				42F6862B28313754004F8342 /* Login.framework in Embed Frameworks */,
 				42F685BE282FF42B004F8342 /* Data.framework in Embed Frameworks */,
 				42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */,
 				42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */,
@@ -82,6 +83,7 @@
 		42ED335528150E83003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED339728158F11003BA251 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		42F685BC282FF42B004F8342 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F6862928313754004F8342 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32B24BE63928B5725891674 /* Pods-ComponentsApp1.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsApp1.testing.xcconfig"; path = "Target Support Files/Pods-ComponentsApp1/Pods-ComponentsApp1.testing.xcconfig"; sourceTree = "<group>"; };
 		DB16D1925350708023329685 /* Pods-ComponentsApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComponentsApp1.release.xcconfig"; path = "Target Support Files/Pods-ComponentsApp1/Pods-ComponentsApp1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,9 +96,8 @@
 				42F685BD282FF42B004F8342 /* Data.framework in Frameworks */,
 				42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */,
 				42087944280EFBD700940F3E /* Tutorial.framework in Frameworks */,
-				42B494972810504F0046C2EE /* FirebaseAnalytics in Frameworks */,
 				42ED335628150E83003BA251 /* Core.framework in Frameworks */,
-				42B494992810504F0046C2EE /* FirebaseAuth in Frameworks */,
+				42F6862A28313754004F8342 /* Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +192,7 @@
 		4208793E280EFB5700940F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42F6862928313754004F8342 /* Login.framework */,
 				42F685BC282FF42B004F8342 /* Data.framework */,
 				42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */,
 				42ED335528150E83003BA251 /* Core.framework */,
@@ -244,8 +246,6 @@
 			);
 			name = ComponentsApp1;
 			packageProductDependencies = (
-				42B494962810504F0046C2EE /* FirebaseAnalytics */,
-				42B494982810504F0046C2EE /* FirebaseAuth */,
 			);
 			productName = ComponentsApp1;
 			productReference = 420878BF280EF37F00940F3E /* ComponentsApp1.app */;
@@ -320,7 +320,6 @@
 			);
 			mainGroup = 420878B6280EF37F00940F3E;
 			packageReferences = (
-				42B494952810504F0046C2EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 420878C0280EF37F00940F3E /* Products */;
 			projectDirPath = "";
@@ -861,30 +860,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		42B494952810504F0046C2EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		42B494962810504F0046C2EE /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42B494952810504F0046C2EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		42B494982810504F0046C2EE /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42B494952810504F0046C2EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 420878B7280EF37F00940F3E /* Project object */;
 }

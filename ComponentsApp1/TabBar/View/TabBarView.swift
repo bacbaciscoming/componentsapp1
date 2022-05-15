@@ -36,12 +36,21 @@ struct TabBarView: View {
                             .tag(Tab.home)
                         Text("Search")
                             .tag(Tab.search)
-                        Text("Like")
-                            .tag(Tab.like)
-                        Text("Profile")
-                            .tag(Tab.profile)
+                        Text("Map")
+                            .tag(Tab.mapMarker)
                         Text("Setting")
                             .tag(Tab.setting)
+                        VStack {
+                            Text("Profile")
+                        }
+                        .tag(Tab.profile)
+                        .frame(
+                              minWidth: 0,
+                              maxWidth: .infinity,
+                              minHeight: 0,
+                              maxHeight: .infinity
+                            )
+                        .background(Color.red)
                     }
                     CustomTabBarView(currentTab: $currentTab)
                 }
@@ -88,7 +97,7 @@ struct TabBarView: View {
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        TabBarView().environmentObject(ViewLaunchModel())
     }
 }
 #endif

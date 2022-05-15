@@ -10,6 +10,9 @@
       <FileRef
          location = "group:Features/Tutorial/Tutorial.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Features/Login/Login.xcodeproj">
+      </FileRef>
    </Group>
    <Group
       location = "container:"

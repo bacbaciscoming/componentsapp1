@@ -73,11 +73,11 @@ struct CustomTabBarView: View {
             return 0
         case .search:
             return 1
-        case .like:
+        case .mapMarker:
             return 2
-        case .profile:
-            return 3
         case .setting:
+            return 3
+        case .profile:
             return 4
         }
     }

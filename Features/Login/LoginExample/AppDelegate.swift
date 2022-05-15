@@ -1,19 +1,19 @@
 //
 //  AppDelegate.swift
-//  ComponentsApp1
+//  LoginExample
 //
-//  Created by Phittaya Wongsuwan on 19/4/2565 BE.
+//  Created by Phittaya Wongsuwan on 15/5/2565 BE.
 //
 
 import UIKit
-import Firebase
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
         return true
     }
 
@@ -30,9 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        completionHandler(.noData)
-    }
+
+
 }
 

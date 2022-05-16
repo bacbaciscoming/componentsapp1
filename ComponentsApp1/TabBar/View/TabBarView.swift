@@ -94,7 +94,7 @@ struct ProfileTabView : View {
                     Button {
                         self.login()
                     } label: {
-                        Text(UserDefaultsKey.LoginStatus.bool ? "Logout" : "Login")
+                        Text(UserDefaultsKey.IsLogin.bool ? "Logout" : "Login")
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.vertical, 12)
@@ -106,6 +106,7 @@ struct ProfileTabView : View {
                         
                     }
                 }
+                .padding(.top, 20)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             .navigationTitle("Profile")

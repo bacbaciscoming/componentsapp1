@@ -10,7 +10,7 @@ import Foundation
 public struct UserDefaultsKey {
     
     public static let LaunchBefore = UserDefaultsKey("LaunchBefore")
-    public static let LoginStatus = UserDefaultsKey("LoginStatus")
+    public static let IsLogin = UserDefaultsKey("IsLogin")
     
     private let key: String
     
@@ -71,3 +71,4 @@ public struct UserDefaultsKey {
         UserDefaults.standard.removeObject(forKey: key)
     }
 }
+

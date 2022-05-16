@@ -7,12 +7,9 @@
 
 import SwiftUI
 import Firebase
+import Core
 
 class VerificationViewModel: ObservableObject {
-    
-    // MARK: Login Data
-    @Published var number: String = ""
-    @Published var code: String = ""
     
     @Published var otpText: String = ""
     @Published var otpFields: [String] = Array(repeating: "", count: 6)
@@ -22,24 +19,27 @@ class VerificationViewModel: ObservableObject {
     @Published var errorMsg: String = ""
     
     // MARK: OTP Credentials
-    @Published var verificationCode: String = ""
+    @Published var verificationCode: String
     
     @Published var isLoading: Bool = false
     
-    // MARK: Sending OTP
-    func sendOTP() {
-        if self.isLoading { return }
+    init(verificationCode: String) {
+        self.verificationCode = verificationCode
+    }
+    
+    func verifyOTP() {
         self.isLoading = true
-        PhoneAuthProvider.provider().verifyPhoneNumber("+\(code)", uiDelegate: nil) { result, error in
-            DispatchQueue.main.async {
-                self.isLoading = false
-                if let result = result {
-                    self.verificationCode = result
-                } else {
-                    self.errorMsg = error?.localizedDescription ?? ""
-                    self.showAlert.toggle()
-                }
-            }
+//        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpText)
+//        Auth.auth().signIn(with: credential) { result, error in
+//            DispatchQueue.main.async {
+//                self.isLoading = false
+//                UserDefaultsKey.IsLogin.set(value: true)
+//            }
+//        }
+        DispatchQueue.main.async {
+            self.isLoading = false
+            UserDefaultsKey.IsLogin.set(value: true)
+            LoginScene.login.dismiss()
         }
     }
 }

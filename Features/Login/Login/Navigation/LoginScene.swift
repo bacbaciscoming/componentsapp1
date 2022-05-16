@@ -11,6 +11,7 @@ import Core
 
 public enum LoginScene {
     case login
+    case verification(verificationCode: String)
 }
 
 extension LoginScene: SceneType {
@@ -19,6 +20,12 @@ extension LoginScene: SceneType {
         switch self {
         case .login:
             let viewController: UIViewController = UIHostingController(rootView: LoginView())
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.navigationBar.isHidden = true
+            return navigationController
+        case .verification(let verificationCode):
+            let view = VerificationView(viewModel: VerificationViewModel(verificationCode: verificationCode))
+            let viewController: UIViewController = UIHostingController(rootView: view)
             return viewController
         }
     }

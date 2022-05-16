@@ -18,7 +18,7 @@ struct VerificationView: View {
         case field6
     }
     
-    @StateObject var viewModel: VerificationViewModel = .init()
+    @ObservedObject var viewModel: VerificationViewModel
     // MARK: TextField FocusState
     @FocusState var activeField: Field?
     
@@ -26,9 +26,8 @@ struct VerificationView: View {
         NavigationView {
             VStack {
                 OTPField()
-                
                 Button {
-                    
+                    self.viewModel.verifyOTP()
                 } label: {
                     Text("Verify")
                         .fontWeight(.semibold)
@@ -38,6 +37,11 @@ struct VerificationView: View {
                         .background(
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .fill(.blue)
+                                .opacity(viewModel.isLoading ? 0 : 1)
+                        )
+                        .overlay(
+                            ProgressView()
+                                .opacity(viewModel.isLoading ? 1 : 0)
                         )
                     
                 }
@@ -59,9 +63,11 @@ struct VerificationView: View {
             .padding()
             .frame(maxHeight: .infinity, alignment: .top)
             .navigationTitle("Verification")
+            .navigationBarItems(leading: self.backButton())
             .onChange(of: viewModel.otpFields) { newValue in
                 OTPCondition(value: newValue)
             }
+            .alert(viewModel.errorMsg, isPresented: $viewModel.showAlert) {}
         }
     }
     
@@ -74,6 +80,22 @@ struct VerificationView: View {
     
     // MARK: Conditions For Custom OTP Field & Limiting Only One Text
     func OTPCondition(value: [String]) {
+        
+        // Checking if OTP is Pressend
+        for index in 0..<6 {
+            if value[index].count == 6 {
+                DispatchQueue.main.async {
+                    viewModel.otpText = value[index]
+                    viewModel.otpFields[index] = ""
+                    
+                    // Updating All TextFields with Value
+                    for item in viewModel.otpText.enumerated() {
+                        viewModel.otpFields[item.offset] = String(item.element)
+                    }
+                }
+                return
+            }
+        }
         
         // Moving Next Field If Current Field Type
         for index in 0..<5 {
@@ -128,6 +150,20 @@ struct VerificationView: View {
         default: return .field6
         }
     }
+    
+    private func backButton() -> AnyView {
+        return AnyView(
+            Button(action: {
+                LoginScene.login.dismiss()
+            }) {
+                Image(systemName: "chevron.down")
+                    .frame(width: 24, height: 24, alignment: .center)
+                    .foregroundColor(Color.black)
+            }
+            .frame(width: 34, height: 34, alignment: .center)
+            .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+        )
+    }
 }
 
 struct VerificationView_Previews: PreviewProvider {
@@ -137,7 +173,7 @@ struct VerificationView_Previews: PreviewProvider {
         // the known bug that causes the `@FocusState` property of a
         // top-level View rendered inside of a Preview, to not work properly.
         ZStack {
-            VerificationView()
+            VerificationView(viewModel: VerificationViewModel(verificationCode: ""))
         }
     }
 }

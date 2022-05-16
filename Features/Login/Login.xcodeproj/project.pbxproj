@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		42B21628283282BA00AFF65D /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21627283282BA00AFF65D /* LoginScene.swift */; };
 		42B21629283282BA00AFF65D /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21627283282BA00AFF65D /* LoginScene.swift */; };
+		42B2162E2832992300AFF65D /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2162D2832992300AFF65D /* ExampleView.swift */; };
+		42B216322832A0D000AFF65D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B216312832A0D000AFF65D /* LoginViewModel.swift */; };
+		42B216332832A0D000AFF65D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B216312832A0D000AFF65D /* LoginViewModel.swift */; };
 		42F685EB283135F5004F8342 /* Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685E2283135F5004F8342 /* Login.framework */; };
 		42F685F0283135F5004F8342 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F685EF283135F5004F8342 /* LoginTests.swift */; };
 		42F685F1283135F5004F8342 /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = 42F685E5283135F5004F8342 /* Login.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		42B21627283282BA00AFF65D /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
+		42B2162D2832992300AFF65D /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		42B216312832A0D000AFF65D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		42F685E2283135F5004F8342 /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F685E5283135F5004F8342 /* Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		42F685EA283135F5004F8342 /* LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +100,22 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		42B2162F283299F600AFF65D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42B2162D2832992300AFF65D /* ExampleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42B216302832A0BB00AFF65D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42B216312832A0D000AFF65D /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		42F685D8283135F5004F8342 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +159,7 @@
 		42F68615283136DD004F8342 /* LoginExample */ = {
 			isa = PBXGroup;
 			children = (
+				42B2162F283299F600AFF65D /* View */,
 				42F68616283136DD004F8342 /* AppDelegate.swift */,
 				42F68618283136DD004F8342 /* SceneDelegate.swift */,
 				42F6861A283136DD004F8342 /* ViewController.swift */,
@@ -186,6 +208,7 @@
 		42F6864F28322A80004F8342 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				42B216302832A0BB00AFF65D /* ViewModel */,
 				42F6865028322A87004F8342 /* View */,
 			);
 			path = Login;
@@ -347,6 +370,7 @@
 				42F6865228322A99004F8342 /* LoginView.swift in Sources */,
 				42F6863728313BFA004F8342 /* VerificationView.swift in Sources */,
 				42B21628283282BA00AFF65D /* LoginScene.swift in Sources */,
+				42B216322832A0D000AFF65D /* LoginViewModel.swift in Sources */,
 				42F6863A28313D63004F8342 /* VerificationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,10 +390,12 @@
 				42F6865328322A99004F8342 /* LoginView.swift in Sources */,
 				42F6861B283136DD004F8342 /* ViewController.swift in Sources */,
 				42F68617283136DD004F8342 /* AppDelegate.swift in Sources */,
+				42B2162E2832992300AFF65D /* ExampleView.swift in Sources */,
 				42F68619283136DD004F8342 /* SceneDelegate.swift in Sources */,
 				42F6863B28313D63004F8342 /* VerificationViewModel.swift in Sources */,
 				42F6863828313BFA004F8342 /* VerificationView.swift in Sources */,
 				42B21629283282BA00AFF65D /* LoginScene.swift in Sources */,
+				42B216332832A0D000AFF65D /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

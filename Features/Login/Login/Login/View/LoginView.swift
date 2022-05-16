@@ -10,14 +10,14 @@ import Core
 
 struct LoginView: View {
     
-    @StateObject var viewModel: VerificationViewModel = .init()
+    @StateObject var viewModel: LoginViewModel = .init()
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack(spacing: 10) {
                     VStack(spacing: 8) {
-                        TextField("1", text: $viewModel.code)
+                        TextField("+66", text: $viewModel.code)
                             .keyboardType(.numberPad)
                             .multilineTextAlignment(.center)
                         
@@ -29,7 +29,7 @@ struct LoginView: View {
                     .frame(width: 40)
                     
                     VStack(spacing: 8) {
-                        TextField("+66873783487", text: $viewModel.number)
+                        TextField("", text: $viewModel.number)
                             .keyboardType(.numberPad)
                             .multilineTextAlignment(.center)
                         
@@ -60,11 +60,13 @@ struct LoginView: View {
                     .disabled(viewModel.code == "" || viewModel.number == "")
                     .opacity(viewModel.code == "" || viewModel.number == "" ? 0.4 : 1)
                 }
+                .padding(.vertical)
             }
             .padding()
             .frame(maxHeight: .infinity, alignment: .top)
             .navigationTitle("Login")
             .navigationBarItems(leading: self.backButton())
+            .alert(viewModel.errorMsg, isPresented: $viewModel.showAlert) {}
         }
     }
     

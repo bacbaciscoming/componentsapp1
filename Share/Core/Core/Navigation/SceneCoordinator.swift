@@ -11,7 +11,6 @@ import Combine
 
 public protocol SceneCoordinatorType {
     func transition(type: SceneTransitionType)
-    var currentViewController: UIViewController { get }
 }
 
 public protocol SwitchTabbarAction: AnyObject {
@@ -22,11 +21,11 @@ public class SceneCoordinator: SceneCoordinatorType {
     public static weak var delegate: SwitchTabbarAction? = nil
     
     private weak var window: UIWindow!
-    public var currentViewController: UIViewController {
+    private var currentViewController: UIViewController {
         return UIApplication.topViewController() ?? rootViewController
     }
     
-    public var rootViewController: UIViewController {
+    private var rootViewController: UIViewController {
         return window.rootViewController ?? UIViewController()
     }
     
@@ -44,10 +43,20 @@ public class SceneCoordinator: SceneCoordinatorType {
     
     public func transition(type: SceneTransitionType) {
         switch type {
+        case .push(let scene, let animated):
+            let viewController = scene.viewController()
+            if let navigationController = currentViewController.navigationController {
+                navigationController.navigationBar.isHidden = true
+                navigationController.pushViewController(viewController, animated: animated)
+            }
         case .present(let scene, let animated, let presentationStyle):
             let viewController = scene.viewController()
             viewController.modalPresentationStyle = presentationStyle
             self.currentViewController.present(viewController, animated: animated)
+        case .pop(animated: let animated):
+            if let navigationController = currentViewController.navigationController {
+                navigationController.popViewController(animated: animated)
+            }
         case .dismiss(let animated):
             if let presentingViewController = currentViewController.presentingViewController {
                 presentingViewController.dismiss(animated: animated, completion: nil)

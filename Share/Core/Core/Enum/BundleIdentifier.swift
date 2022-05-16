@@ -10,5 +10,7 @@ import Foundation
 public enum BundleIdentifier: String {
     case componentsApp1    =   "com.p.ComponentsApp1"
     case tutorial          =   "com.p.Tutorial"
+    case login             =   "com.p.Login"
+    case data              =   "com.p.Data"
     case core              =   "com.p.Core"
 }

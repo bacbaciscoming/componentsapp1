@@ -10,8 +10,9 @@ import Foundation
 public struct UserDefaultsKey {
     
     public static let LaunchBefore = UserDefaultsKey("LaunchBefore")
+    public static let LoginStatus = UserDefaultsKey("LoginStatus")
     
-    private let key:String
+    private let key: String
     
     public init(_ key: String) {
         self.key = key

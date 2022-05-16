@@ -12,7 +12,7 @@ public extension View {
         self
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                Color("Dominant")
+                AppColor.dominant
             )
     }
     
@@ -20,7 +20,7 @@ public extension View {
         self
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                Color("Secondary")
+                AppColor.secondary
             )
     }
     
@@ -28,7 +28,9 @@ public extension View {
         self
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                Color("Accent")
+                AppColor.accent
             )
     }
 }
+
+

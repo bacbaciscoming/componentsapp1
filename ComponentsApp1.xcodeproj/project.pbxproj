@@ -17,8 +17,6 @@
 		42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4208793F280EFB5700940F3E /* Tutorial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42B4949428104EBF0046C2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B4949328104EBF0046C2EE /* GoogleService-Info.plist */; };
 		42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */; };
-		42CA3F4C281FC3360006EF9C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F4B281FC3360006EF9C /* Tab.swift */; };
-		42CA3F51281FC7810006EF9C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F50281FC7810006EF9C /* CustomTabBar.swift */; };
 		42ED335628150E83003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; };
 		42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42ED339828158F11003BA251 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED339728158F11003BA251 /* TabBarView.swift */; };
@@ -78,8 +76,6 @@
 		4208793F280EFB5700940F3E /* Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B4949328104EBF0046C2EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ComponentsApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42CA3F4B281FC3360006EF9C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		42CA3F50281FC7810006EF9C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		42ED335528150E83003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED339728158F11003BA251 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		42F685BC282FF42B004F8342 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				42ED339728158F11003BA251 /* TabBarView.swift */,
-				42CA3F50281FC7810006EF9C /* CustomTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,18 +197,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		42CA3F4A281FC3250006EF9C /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				42CA3F4B281FC3360006EF9C /* Tab.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
 		42CA3F4D281FC6370006EF9C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				42CA3F4A281FC3250006EF9C /* Enum */,
 				420878F2280EF60600940F3E /* View */,
 			);
 			path = TabBar;
@@ -390,8 +376,6 @@
 			files = (
 				42ED339828158F11003BA251 /* TabBarView.swift in Sources */,
 				420878C3280EF37F00940F3E /* AppDelegate.swift in Sources */,
-				42CA3F51281FC7810006EF9C /* CustomTabBar.swift in Sources */,
-				42CA3F4C281FC3360006EF9C /* Tab.swift in Sources */,
 				420878C5280EF37F00940F3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

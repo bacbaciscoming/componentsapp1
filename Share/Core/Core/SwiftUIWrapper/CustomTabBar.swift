@@ -28,18 +28,19 @@ struct CustomTabBarView: View {
                         }
                     } label: {
                         VStack {
-                            Image(tab.rawValue)
+                            Image(tab.rawValue,
+                                  bundle: Bundle(identifier: BundleIdentifier.core.rawValue))
                                 .renderingMode(.template)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 30, height: 30)
                                 .frame(maxWidth: .infinity)
-                                .foregroundColor(currentTab == tab ? Color("Accent") : Color("Secondary"))
+                                .foregroundColor(currentTab == tab ? AppColor.accent : AppColor.secondary)
                             // MARK: Little Scaling Effect
                                 .scaleEffect(currentTab == tab && yOffset != 0 ? 1.5 : 1)
                             Text(tab.rawValue)
                                 .font(.footnote)
-                                .foregroundColor(currentTab == tab ? Color("Accent") : Color("Secondary"))
+                                .foregroundColor(currentTab == tab ? AppColor.accent : AppColor.secondary)
                         } 
                     }
                 }
@@ -80,12 +81,6 @@ struct CustomTabBarView: View {
         case .profile:
             return 4
         }
-    }
-}
-
-struct CustomTabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomTabBarView(currentTab: .constant(Tab.home))
     }
 }
 #endif

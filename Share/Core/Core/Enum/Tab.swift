@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Tab: String, CaseIterable {
+public enum Tab: String, CaseIterable {
     case home       = "Home"
     case search     = "Search"
     case mapMarker  = "MapMarker"

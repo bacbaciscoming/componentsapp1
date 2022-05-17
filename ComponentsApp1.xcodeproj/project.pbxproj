@@ -16,6 +16,7 @@
 		42087944280EFBD700940F3E /* Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4208793F280EFB5700940F3E /* Tutorial.framework */; };
 		42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4208793F280EFB5700940F3E /* Tutorial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42B4949428104EBF0046C2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B4949328104EBF0046C2EE /* GoogleService-Info.plist */; };
+		42C7DA87283403F70081F428 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7DA86283403F70081F428 /* TabBarViewModel.swift */; };
 		42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */; };
 		42ED335628150E83003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; };
 		42ED335728150E83003BA251 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -75,6 +76,7 @@
 		420878E5280EF38000940F3E /* ComponentsApp1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsApp1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4208793F280EFB5700940F3E /* Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B4949328104EBF0046C2EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42C7DA86283403F70081F428 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ComponentsApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED335528150E83003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED339728158F11003BA251 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -197,9 +199,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		42C7DA85283403DF0081F428 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42C7DA86283403F70081F428 /* TabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		42CA3F4D281FC6370006EF9C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				42C7DA85283403DF0081F428 /* ViewModel */,
 				420878F2280EF60600940F3E /* View */,
 			);
 			path = TabBar;
@@ -374,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C7DA87283403F70081F428 /* TabBarViewModel.swift in Sources */,
 				42ED339828158F11003BA251 /* TabBarView.swift in Sources */,
 				420878C3280EF37F00940F3E /* AppDelegate.swift in Sources */,
 				420878C5280EF37F00940F3E /* SceneDelegate.swift in Sources */,

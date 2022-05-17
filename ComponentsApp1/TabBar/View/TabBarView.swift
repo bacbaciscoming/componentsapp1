@@ -8,7 +8,6 @@
 #if !TESTING
 import SwiftUI
 import Tutorial
-import Login
 import Core
 import Data
 
@@ -16,13 +15,15 @@ struct TabBarView: View {
     
     @EnvironmentObject var viewlaunchModel: ViewLaunchModel
     @Environment(\.colorScheme) var scheme
-    @State var currentTab: Tab = .home
+    
+    @ObservedObject var viewModel: TabBarViewModel
     
     // animate Splash
     @State var animate: Bool = false
     @State var endSplash: Bool = false
     
-    init() {
+    init(viewModel: TabBarViewModel) {
+        self.viewModel = viewModel
         UITabBar.appearance().isHidden = true
     }
     
@@ -32,7 +33,7 @@ struct TabBarView: View {
                 if self.viewlaunchModel.currentPage == .tutorial {
                     TutorialPageView(viewModel: TutorialPageViewModel())
                 } else if self.viewlaunchModel.currentPage == .tabBar {
-                    CustomTabView(currentTab: $currentTab) {
+                    CustomTabView(currentTab: $viewModel.currentTab) {
                         Text("Home")
                             .tag(Tab.home)
                         Text("Search")
@@ -41,7 +42,7 @@ struct TabBarView: View {
                             .tag(Tab.mapMarker)
                         Text("Setting")
                             .tag(Tab.setting)
-                        ProfileTabView()
+                        ProfileTabView(viewModel: self.viewModel)
                             .tag(Tab.profile)
                     }
                 }
@@ -87,14 +88,20 @@ struct TabBarView: View {
 
 struct ProfileTabView : View {
     
+    @ObservedObject var viewModel: TabBarViewModel
+    
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
                 VStack {
                     Button {
-                        self.login()
+                        if self.viewModel.isLogin {
+                            self.viewModel.logout()
+                        } else {
+                            self.viewModel.login()
+                        }
                     } label: {
-                        Text(UserDefaultsKey.IsLogin.bool ? "Logout" : "Login")
+                        Text(self.viewModel.isLogin ? "Logout" : "Login")
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.vertical, 12)
@@ -114,18 +121,11 @@ struct ProfileTabView : View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
-    
-    private func login() {
-        let scene = LoginScene.login
-        let transition: SceneTransitionType = .present(scene: scene, animated: true)
-        let coordinator: SceneCoordinator = SceneCoordinator()
-        coordinator.transition(type: transition)
-    }
 }
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView().environmentObject(ViewLaunchModel())
+        TabBarView(viewModel: TabBarViewModel()).environmentObject(ViewLaunchModel())
     }
 }
 #endif

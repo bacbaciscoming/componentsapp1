@@ -14,6 +14,7 @@
 		42B2162328326FBA00AFF65D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2162228326FBA00AFF65D /* AppColor.swift */; };
 		42B216252832826E00AFF65D /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B216242832826E00AFF65D /* SceneType.swift */; };
 		42B2162B2832877F00AFF65D /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2162A2832877F00AFF65D /* UIApplication+Extension.swift */; };
+		42C7DA812833E0570081F428 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7DA802833E0570081F428 /* LoginManager.swift */; };
 		42CA3F3E281E80E90006EF9C /* BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F3D281E80E90006EF9C /* BundleIdentifier.swift */; };
 		42ED334628150E41003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED333D28150E41003BA251 /* Core.framework */; };
 		42ED334B28150E41003BA251 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED334A28150E41003BA251 /* CoreTests.swift */; };
@@ -58,6 +59,7 @@
 		42B2162228326FBA00AFF65D /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		42B216242832826E00AFF65D /* SceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneType.swift; sourceTree = "<group>"; };
 		42B2162A2832877F00AFF65D /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		42C7DA802833E0570081F428 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		42CA3F3D281E80E90006EF9C /* BundleIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleIdentifier.swift; sourceTree = "<group>"; };
 		42ED333D28150E41003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED334028150E41003BA251 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
+		42C7DA7F2833E0110081F428 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				42C7DA802833E0570081F428 /* LoginManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		42CA3F3C281E80D60006EF9C /* Enum */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		42ED333F28150E41003BA251 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				42C7DA7F2833E0110081F428 /* Manager */,
 				42ED338E2815366A003BA251 /* MockJsonResponse */,
 				42B2162128326FAD00AFF65D /* Color */,
 				42B2161A2832643E00AFF65D /* SwiftUIWrapper */,
@@ -344,6 +355,7 @@
 				42ED336A281511E5003BA251 /* Codable+Extension.swift in Sources */,
 				42CA3F3E281E80E90006EF9C /* BundleIdentifier.swift in Sources */,
 				42ED336B281511E5003BA251 /* Encodable+Extension.swift in Sources */,
+				42C7DA812833E0570081F428 /* LoginManager.swift in Sources */,
 				42B2161E283264D300AFF65D /* Tab.swift in Sources */,
 				42ED3368281511E5003BA251 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				42ED3365281511E5003BA251 /* Encoder+Extension.swift in Sources */,

@@ -10,18 +10,20 @@ import Core
 
 struct ExampleView: View {
     
+    @ObservedObject var viewModel: ExampleViewModel
+    
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
                 VStack {
                     Button {
-                        if UserDefaultsKey.IsLogin.bool {
-                            UserDefaultsKey.IsLogin.set(value: false)
+                        if self.viewModel.isLogin {
+                            self.viewModel.logout()
                         } else {
-                            self.login()
+                            self.viewModel.login()
                         }
                     } label: {
-                        Text(UserDefaultsKey.IsLogin.bool ? "Logout" : "Login")
+                        Text(self.viewModel.isLogin ? "Logout" : "Login")
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.vertical, 12)
@@ -41,17 +43,10 @@ struct ExampleView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
-    
-    private func login() {
-        let scene = LoginScene.login
-        let transition: SceneTransitionType = .present(scene: scene, animated: true)
-        let coordinator: SceneCoordinator = SceneCoordinator()
-        coordinator.transition(type: transition)
-    }
 }
 
 struct ExampleView_Previews: PreviewProvider {
     static var previews: some View {
-        ExampleView()
+        ExampleView(viewModel: ExampleViewModel())
     }
 }

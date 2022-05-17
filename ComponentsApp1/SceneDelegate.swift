@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 #if !TESTING
         
         // Create the SwiftUI view that provides the window contents.
-        let contentView = TabBarView().environmentObject(ViewLaunchModel())
+        let contentView = TabBarView(viewModel: TabBarViewModel()).environmentObject(ViewLaunchModel())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

@@ -29,18 +29,14 @@ class VerificationViewModel: ObservableObject {
     
     func verifyOTP() {
         self.isLoading = true
-//        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpText)
-//        Auth.auth().signIn(with: credential) { result, error in
-//            DispatchQueue.main.async {
-//                self.isLoading = false
-//                UserDefaultsKey.IsLogin.set(value: true)
-//            }
-//        }
-        DispatchQueue.main.async {
-            self.isLoading = false
-            UserDefaultsKey.IsLogin.set(value: true)
-            LoginScene.login.dismiss()
-        }
+        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpText)
+        Auth.auth().signIn(with: credential) { result, error in
+            DispatchQueue.main.async {
+                self.isLoading = false
+                LoginManager.shared.login()
+                LoginScene.login.dismiss()
+            }
+        }  
     }
 }
 

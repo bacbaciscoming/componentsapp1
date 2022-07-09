@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 import Login
 import Core
+import RollingCounter
 
 class TabBarViewModel: ObservableObject {
     
@@ -35,5 +36,12 @@ class TabBarViewModel: ObservableObject {
     
     func logout() {
         LoginManager.shared.logout()
+    }
+    
+    func goRolling() {
+        let scene = RollingCounterScene.rolling
+        let transition: SceneTransitionType = .present(scene: scene, animated: true)
+        let coordinator: SceneCoordinator = SceneCoordinator()
+        coordinator.transition(type: transition)
     }
 }

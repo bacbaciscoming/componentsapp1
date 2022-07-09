@@ -10,6 +10,7 @@ import SwiftUI
 import Tutorial
 import Core
 import Data
+import RollingCounter
 
 struct TabBarView: View {
     
@@ -93,7 +94,7 @@ struct ProfileTabView : View {
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
-                VStack {
+                VStack(alignment: .center, spacing: 25) {
                     Button {
                         if self.viewModel.isLogin {
                             self.viewModel.logout()
@@ -109,6 +110,21 @@ struct ProfileTabView : View {
                             .background(
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                                     .fill(.blue)
+                            )
+                        
+                    }
+
+                    Button {
+                        self.viewModel.goRolling()
+                    } label: {
+                        Text("Go Rolling")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal, 12)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .fill(.red)
                             )
                         
                     }

@@ -29,7 +29,7 @@ extension SeeMoreScene: SceneType {
 extension SeeMoreScene {
     func dismiss(){
             let transition: SceneTransitionType = .dismiss(animated: true)
-        let coordinator: SceneCoordinator = SceneCoordinator()
+            let coordinator: SceneCoordinator = SceneCoordinator()
         coordinator.transition(type: transition)
     }
 }

@@ -128,6 +128,21 @@ struct ProfileTabView : View {
                             )
                         
                     }
+                    
+                    Button {
+                        self.viewModel.seeMore()
+                    } label: {
+                        Text("See More")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal, 12)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .fill(.green)
+                            )
+                        
+                    }
                 }
                 .padding(.top, 20)
             }

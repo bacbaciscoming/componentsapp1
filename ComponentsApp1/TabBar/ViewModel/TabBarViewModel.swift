@@ -10,6 +10,7 @@ import Combine
 import Login
 import Core
 import RollingCounter
+import SeeMore
 
 class TabBarViewModel: ObservableObject {
     
@@ -40,6 +41,13 @@ class TabBarViewModel: ObservableObject {
     
     func goRolling() {
         let scene = RollingCounterScene.rolling
+        let transition: SceneTransitionType = .present(scene: scene, animated: true)
+        let coordinator: SceneCoordinator = SceneCoordinator()
+        coordinator.transition(type: transition)
+    }
+    
+    func seeMore() {
+        let scene = SeeMoreScene.seeMore
         let transition: SceneTransitionType = .present(scene: scene, animated: true)
         let coordinator: SceneCoordinator = SceneCoordinator()
         coordinator.transition(type: transition)

@@ -32,10 +32,13 @@
 		42CA3F42281E820D0006EF9C /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F41281E820D0006EF9C /* ImageAsset.swift */; };
 		42CA3F43281E832A0006EF9C /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F41281E820D0006EF9C /* ImageAsset.swift */; };
 		42CA3F49281EBF0B0006EF9C /* ImageAssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CA3F48281EBF0B0006EF9C /* ImageAssetTests.swift */; };
+		42CD9B6128E3640F00F46CAB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED338A281533B9003BA251 /* Core.framework */; };
+		42CD9B6228E3640F00F46CAB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED338A281533B9003BA251 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		42CD9B6428E3641100F46CAB /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685D5283012CC004F8342 /* Data.framework */; };
+		42CD9B6528E3641100F46CAB /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685D5283012CC004F8342 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42ED337C28151622003BA251 /* GetTutorialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED337B28151622003BA251 /* GetTutorialRepository.swift */; };
 		42ED337D28151622003BA251 /* GetTutorialRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED337B28151622003BA251 /* GetTutorialRepository.swift */; };
 		42ED338728152892003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED338628152892003BA251 /* Core.framework */; };
-		42ED338B281533B9003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED338A281533B9003BA251 /* Core.framework */; };
 		42ED33B32816E301003BA251 /* GetTutorialRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33B22816E301003BA251 /* GetTutorialRepositorySpy.swift */; };
 		42ED33B72816E919003BA251 /* GetTutorialRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33B62816E919003BA251 /* GetTutorialRepositoryTests.swift */; };
 		42ED33BB2816EC9A003BA251 /* TutorialResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33BA2816EC9A003BA251 /* TutorialResponseTests.swift */; };
@@ -43,7 +46,6 @@
 		42ED33C12816EDC7003BA251 /* TutorialPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33C02816EDC7003BA251 /* TutorialPageViewModelTests.swift */; };
 		42ED33C52816EE83003BA251 /* GetTutorialUsecaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ED33C42816EE83003BA251 /* GetTutorialUsecaseSpy.swift */; };
 		42F685C3282FF64B004F8342 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685C2282FF64B004F8342 /* Data.framework */; };
-		42F685D6283012CC004F8342 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F685D5283012CC004F8342 /* Data.framework */; };
 		56D90D039F7F166DD9367570 /* Pods_TutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB7336C64DE12DE018A31FF /* Pods_TutorialTests.framework */; };
 		6AA66A5BFEB32C942FA098CD /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCD9EADAD59009454BC5EA6 /* Pods_Tutorial.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,21 @@
 			remoteInfo = Tutorial;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42CD9B6328E3640F00F46CAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42CD9B6528E3641100F46CAB /* Data.framework in Embed Frameworks */,
+				42CD9B6228E3640F00F46CAB /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		19B41916D2A35043B49871CF /* Pods-TutorialTests.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorialTests.testing.xcconfig"; path = "Target Support Files/Pods-TutorialTests/Pods-TutorialTests.testing.xcconfig"; sourceTree = "<group>"; };
@@ -125,8 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42F685D6283012CC004F8342 /* Data.framework in Frameworks */,
-				42ED338B281533B9003BA251 /* Core.framework in Frameworks */,
+				42CD9B6428E3641100F46CAB /* Data.framework in Frameworks */,
+				42CD9B6128E3640F00F46CAB /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +441,7 @@
 				42087996280F13FE00940F3E /* Sources */,
 				42087997280F13FE00940F3E /* Frameworks */,
 				42087998280F13FE00940F3E /* Resources */,
+				42CD9B6328E3640F00F46CAB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

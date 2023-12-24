@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42CD9B5E28E3640300F46CAB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA30D2879B6C900FCD6DB /* Core.framework */; };
+		42CD9B5F28E3640300F46CAB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA30D2879B6C900FCD6DB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42CEA2E22879B5DD00FCD6DB /* RollingCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA2D92879B5DD00FCD6DB /* RollingCounter.framework */; };
 		42CEA2E72879B5DD00FCD6DB /* RollingCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA2E62879B5DD00FCD6DB /* RollingCounterTests.swift */; };
 		42CEA2E82879B5DD00FCD6DB /* RollingCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 42CEA2DC2879B5DD00FCD6DB /* RollingCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,7 +18,6 @@
 		42CEA3022879B69400FCD6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CEA3002879B69400FCD6DB /* Main.storyboard */; };
 		42CEA3042879B69600FCD6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CEA3032879B69600FCD6DB /* Assets.xcassets */; };
 		42CEA3072879B69600FCD6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CEA3052879B69600FCD6DB /* LaunchScreen.storyboard */; };
-		42CEA30E2879B6C900FCD6DB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA30D2879B6C900FCD6DB /* Core.framework */; };
 		42CEA3192879B76F00FCD6DB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA3182879B76F00FCD6DB /* Core.framework */; };
 		42CEA31F2879B81400FCD6DB /* RollingCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA31E2879B81400FCD6DB /* RollingCounterView.swift */; };
 		42CEA3202879B81400FCD6DB /* RollingCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA31E2879B81400FCD6DB /* RollingCounterView.swift */; };
@@ -35,6 +36,20 @@
 			remoteInfo = RollingCounter;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42CD9B6028E3640300F46CAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42CD9B5F28E3640300F46CAB /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		42CEA2D92879B5DD00FCD6DB /* RollingCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RollingCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42CEA30E2879B6C900FCD6DB /* Core.framework in Frameworks */,
+				42CD9B5E28E3640300F46CAB /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +245,7 @@
 				42CEA2F42879B69400FCD6DB /* Sources */,
 				42CEA2F52879B69400FCD6DB /* Frameworks */,
 				42CEA2F62879B69400FCD6DB /* Resources */,
+				42CD9B6028E3640300F46CAB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

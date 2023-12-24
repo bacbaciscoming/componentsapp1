@@ -18,6 +18,10 @@
 		42B4949428104EBF0046C2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42B4949328104EBF0046C2EE /* GoogleService-Info.plist */; };
 		42C7DA87283403F70081F428 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7DA86283403F70081F428 /* TabBarViewModel.swift */; };
 		42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */; };
+		42CD9B3128E3620F00F46CAB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD9B3028E3620F00F46CAB /* Alamofire */; };
+		42CD9B3428E362C700F46CAB /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD9B3328E362C700F46CAB /* SDWebImage */; };
+		42CD9B6B28E3651600F46CAB /* SeeMore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CD9B6A28E3651600F46CAB /* SeeMore.framework */; };
+		42CD9B6C28E3651600F46CAB /* SeeMore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42CD9B6A28E3651600F46CAB /* SeeMore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42CEA2F22879B62500FCD6DB /* RollingCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA2F12879B62500FCD6DB /* RollingCounter.framework */; };
 		42CEA2F32879B62500FCD6DB /* RollingCounter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA2F12879B62500FCD6DB /* RollingCounter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42ED335628150E83003BA251 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED335528150E83003BA251 /* Core.framework */; };
@@ -54,6 +58,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				42F6862B28313754004F8342 /* Login.framework in Embed Frameworks */,
+				42CD9B6C28E3651600F46CAB /* SeeMore.framework in Embed Frameworks */,
 				42F685BE282FF42B004F8342 /* Data.framework in Embed Frameworks */,
 				42CEA2F32879B62500FCD6DB /* RollingCounter.framework in Embed Frameworks */,
 				42087945280EFBD700940F3E /* Tutorial.framework in Embed Frameworks */,
@@ -81,6 +86,7 @@
 		42B4949328104EBF0046C2EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42C7DA86283403F70081F428 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		42CA3F1C281D75D00006EF9C /* Pods_ComponentsApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ComponentsApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42CD9B6A28E3651600F46CAB /* SeeMore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SeeMore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA2F12879B62500FCD6DB /* RollingCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RollingCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED335528150E83003BA251 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42ED339728158F11003BA251 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -96,10 +102,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F685BD282FF42B004F8342 /* Data.framework in Frameworks */,
+				42CD9B3128E3620F00F46CAB /* Alamofire in Frameworks */,
+				42CD9B3428E362C700F46CAB /* SDWebImage in Frameworks */,
 				42CEA2F22879B62500FCD6DB /* RollingCounter.framework in Frameworks */,
 				42CA3F1D281D75D00006EF9C /* Pods_ComponentsApp1.framework in Frameworks */,
 				42087944280EFBD700940F3E /* Tutorial.framework in Frameworks */,
 				42ED335628150E83003BA251 /* Core.framework in Frameworks */,
+				42CD9B6B28E3651600F46CAB /* SeeMore.framework in Frameworks */,
 				42F6862A28313754004F8342 /* Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +203,7 @@
 		4208793E280EFB5700940F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42CD9B6A28E3651600F46CAB /* SeeMore.framework */,
 				42CEA2F12879B62500FCD6DB /* RollingCounter.framework */,
 				42F6862928313754004F8342 /* Login.framework */,
 				42F685BC282FF42B004F8342 /* Data.framework */,
@@ -249,6 +259,8 @@
 			);
 			name = ComponentsApp1;
 			packageProductDependencies = (
+				42CD9B3028E3620F00F46CAB /* Alamofire */,
+				42CD9B3328E362C700F46CAB /* SDWebImage */,
 			);
 			productName = ComponentsApp1;
 			productReference = 420878BF280EF37F00940F3E /* ComponentsApp1.app */;
@@ -323,6 +335,8 @@
 			);
 			mainGroup = 420878B6280EF37F00940F3E;
 			packageReferences = (
+				42CD9B2F28E3620F00F46CAB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				42CD9B3228E362C600F46CAB /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 420878C0280EF37F00940F3E /* Products */;
 			projectDirPath = "";
@@ -862,6 +876,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42CD9B2F28E3620F00F46CAB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		42CD9B3228E362C600F46CAB /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42CD9B3028E3620F00F46CAB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42CD9B2F28E3620F00F46CAB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		42CD9B3328E362C700F46CAB /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42CD9B3228E362C600F46CAB /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 420878B7280EF37F00940F3E /* Project object */;
 }

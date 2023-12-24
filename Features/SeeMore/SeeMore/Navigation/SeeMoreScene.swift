@@ -27,10 +27,11 @@ extension SeeMoreScene: SceneType {
 }
 
 extension SeeMoreScene {
-    func dismiss()  {
-            let transition: SceneTransitionType = .dismiss(animated: true)
+    func dismiss()      {
+                        let transition: SceneTransitionType = .dismiss(animated: true)
             let coordinator: SceneCoordinator = SceneCoordinator()
-        coordinator.transition(type: transition)
+            coordinator.transition(type: transition)
+        
     }
 }
 

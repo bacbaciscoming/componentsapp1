@@ -13,15 +13,49 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-default_platform(:ios)
+# example fastlane
+default_platform :ios
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  # command: fastlane deploy
+  lane :deploy do
+    build
+    distribute
   end
 
-  desc "Build application and export ipa"
+  # command: fastlane build
+  desc "build application and export ipa" # description of what the lane does
+  lane :build do # name of lane
+    # set the build number using the timestamp
+    timestamp = Time.now.to_i
+    increment_build_number(
+      build_number: timestamp
+    )
+
+    gym(scheme: "ComponentsApp1",  # target
+        export_options: { # options of export .ipa  file
+          method: "ad-hoc", # app-store, ad-hoc, package, enterprise , development, developer-id
+          provisioningProfiles: { # match bundle identifier with provisioning profiles
+            "com.demo.componentsApp1" => "componentApp1-adhoc provisioning profile"
+          }
+        },
+        output_directory: "./output", # destination directory
+        output_name: "ComponentsApp1.ipa") # specify the name of .ipa file
+  end
+
+  # command: fastlane distribute
+  desc "distribute app via Firebase"
+  lane :distribute do
+    firebase_app_distribution(
+      app: "1:472263114711:ios:4ee290ba0f99191f945592",
+      ipa_path: "./output/ComponentsApp1.ipa",
+      # testers: "phittayawongsuwan@gmail.com",
+      groups: "Testers"
+    )
+  end
+
+  # command: fastlane tests
+  desc "run unit tests"
   lane :tests do
     run_tests(scheme: "ComponentsApp1")
   end

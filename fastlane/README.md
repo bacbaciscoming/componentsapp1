@@ -15,13 +15,29 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios custom_lane
+### ios deploy
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios deploy
 ```
 
-Description of what the lane does
+
+
+### ios build
+
+```sh
+[bundle exec] fastlane ios build
+```
+
+build application and export ipa
+
+### ios distribute
+
+```sh
+[bundle exec] fastlane ios distribute
+```
+
+distribute app via Firebase
 
 ### ios tests
 
@@ -29,7 +45,7 @@ Description of what the lane does
 [bundle exec] fastlane ios tests
 ```
 
-Build application and export ipa
+run unit tests
 
 ----
 

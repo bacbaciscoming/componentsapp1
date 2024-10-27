@@ -25,6 +25,7 @@ class SeeMoreViewModel: ObservableObject {
 
     init() {
         setObserve()
+        let x = 0
         if x == 0 {}
     }
 

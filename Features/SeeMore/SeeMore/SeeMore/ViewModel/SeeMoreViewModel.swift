@@ -10,34 +10,34 @@ import Foundation
 import SwiftUI
 
 class SeeMoreViewModel: ObservableObject {
-    
     enum State {
         case idle
         case loading
         case failed
         case loaded
     }
-    
+
     @Published private(set) var state: State = .idle
     @Published var topNavList: [String] = []
     @Published var focusIndex: Int = 0
-    
+
     private var anyCancellable = Set<AnyCancellable>()
-    
+
     init() {
-        self.setObserve()
+        setObserve()
+        if x == 0 {}
     }
-    
+
     private func setObserve() {
         $focusIndex
             .dropFirst()
             .sink { index in
-                let _ = print("💥 focusIndex = \(index)")
+                _ = print("💥 focusIndex = \(index)")
                 self.getContent()
             }
             .store(in: &anyCancellable)
     }
-    
+
     func getTopNevigation() {
         state = .loading
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -45,7 +45,7 @@ class SeeMoreViewModel: ObservableObject {
             self.getContent()
         }
     }
-    
+
     func getContent() {
         state = .loading
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

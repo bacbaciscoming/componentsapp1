@@ -21,8 +21,8 @@
 		42CEA3192879B76F00FCD6DB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CEA3182879B76F00FCD6DB /* Core.framework */; };
 		42CEA31F2879B81400FCD6DB /* RollingCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA31E2879B81400FCD6DB /* RollingCounterView.swift */; };
 		42CEA3202879B81400FCD6DB /* RollingCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA31E2879B81400FCD6DB /* RollingCounterView.swift */; };
-		42CEA3272879BA0A00FCD6DB /* RollingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA3262879BA0A00FCD6DB /* RollingText.swift */; };
-		42CEA3282879BA0A00FCD6DB /* RollingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA3262879BA0A00FCD6DB /* RollingText.swift */; };
+		42CEA3272879BA0A00FCD6DB /* RollingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA3262879BA0A00FCD6DB /* RollingTextView.swift */; };
+		42CEA3282879BA0A00FCD6DB /* RollingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA3262879BA0A00FCD6DB /* RollingTextView.swift */; };
 		42CEA32A2879C81600FCD6DB /* RollingCounterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA3292879C81500FCD6DB /* RollingCounterScene.swift */; };
 		42CEA32B2879C81600FCD6DB /* RollingCounterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEA3292879C81500FCD6DB /* RollingCounterScene.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +68,7 @@
 		42CEA3112879B6CE00FCD6DB /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA3182879B76F00FCD6DB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CEA31E2879B81400FCD6DB /* RollingCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingCounterView.swift; sourceTree = "<group>"; };
-		42CEA3262879BA0A00FCD6DB /* RollingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingText.swift; sourceTree = "<group>"; };
+		42CEA3262879BA0A00FCD6DB /* RollingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingTextView.swift; sourceTree = "<group>"; };
 		42CEA3292879C81500FCD6DB /* RollingCounterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingCounterScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				42CEA31E2879B81400FCD6DB /* RollingCounterView.swift */,
-				42CEA3262879BA0A00FCD6DB /* RollingText.swift */,
+				42CEA3262879BA0A00FCD6DB /* RollingTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 			files = (
 				42CEA31F2879B81400FCD6DB /* RollingCounterView.swift in Sources */,
 				42CEA32A2879C81600FCD6DB /* RollingCounterScene.swift in Sources */,
-				42CEA3272879BA0A00FCD6DB /* RollingText.swift in Sources */,
+				42CEA3272879BA0A00FCD6DB /* RollingTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +350,7 @@
 			files = (
 				42CEA2FF2879B69400FCD6DB /* ViewController.swift in Sources */,
 				42CEA2FB2879B69400FCD6DB /* AppDelegate.swift in Sources */,
-				42CEA3282879BA0A00FCD6DB /* RollingText.swift in Sources */,
+				42CEA3282879BA0A00FCD6DB /* RollingTextView.swift in Sources */,
 				42CEA32B2879C81600FCD6DB /* RollingCounterScene.swift in Sources */,
 				42CEA3202879B81400FCD6DB /* RollingCounterView.swift in Sources */,
 				42CEA2FD2879B69400FCD6DB /* SceneDelegate.swift in Sources */,

@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct RollingCounterView: View {
-    
     @State var value: Int = 0
-    
+
     var body: some View {
         NavigationView {
             VStack(spacing: 25) {
-                RollingText(font: .system(size: 55), weight: .black, value: $value)
+                RollingTextView(font: .system(size: 55), weight: .black, value: $value)
                 Button("Change Value") {
-                    value = .random(in: 200...1300)
+                    value = .random(in: 200 ... 1300)
                 }
-                
             }
             .padding()
             .frame(maxHeight: .infinity, alignment: .center)
@@ -26,7 +24,7 @@ struct RollingCounterView: View {
             .navigationBarItems(leading: self.backButton())
         }
     }
-    
+
     private func backButton() -> AnyView {
         return AnyView(
             Button(action: {
@@ -47,4 +45,3 @@ struct RollingCounterView_Previews: PreviewProvider {
         RollingCounterView()
     }
 }
-

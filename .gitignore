@@ -126,3 +126,4 @@ Carthage/Build
 *.app.dSYM.zip
 *.lock
 .bundle/config
+.scannerwork

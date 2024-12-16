@@ -6,23 +6,22 @@
 //
 
 #if !TESTING
-import SwiftUI
+    import SwiftUI
 
-public struct CustomTabView<Content: View>: View {
-    
-    @Binding var currentTab: Tab
-    var content: Content
-    
-    public init(currentTab: Binding<Tab>, @ViewBuilder content: () -> Content) {
-        self._currentTab = currentTab
-        self.content = content()
-    }
-    
-    public var body: some View {
-        TabView(selection: $currentTab) {
-            content
+    public struct CustomTabView<Content: View>: View {
+        @Binding var currentTab: Tabs
+        var content: Content
+
+        public init(currentTab: Binding<Tabs>, @ViewBuilder content: () -> Content) {
+            _currentTab = currentTab
+            self.content = content()
         }
-        CustomTabBarView(currentTab: $currentTab)
+
+        public var body: some View {
+            TabView(selection: $currentTab) {
+                content
+            }
+            CustomTabBarView(currentTab: $currentTab)
+        }
     }
-}
 #endif

@@ -5,51 +5,50 @@
 //  Created by Phittaya Wongsuwan on 17/5/2565 BE.
 //
 
-import SwiftUI
 import Combine
-import Login
 import Core
+import Login
 import RollingCounter
 import SeeMore
+import SwiftUI
 
 class TabBarViewModel: ObservableObject {
-    
-    @Published var currentTab: Tab = .home
+    @Published var currentTab: Tabs = .home
     @Published var isLogin: Bool = false
-    private var anyCancellable: Set<AnyCancellable> = Set<AnyCancellable>()
-    
+    private var anyCancellable: Set<AnyCancellable> = .init()
+
     init() {
-        self.subscribeIsLogin()
+        subscribeIsLogin()
     }
-    
+
     private func subscribeIsLogin() {
         LoginManager.shared.isLogin
             .assign(to: \.isLogin, on: self)
-            .store(in: &self.anyCancellable)
+            .store(in: &anyCancellable)
     }
-    
+
     func login() {
         let scene = LoginScene.login
         let transition: SceneTransitionType = .present(scene: scene, animated: true)
-        let coordinator: SceneCoordinator = SceneCoordinator()
+        let coordinator = SceneCoordinator()
         coordinator.transition(type: transition)
     }
-    
+
     func logout() {
         LoginManager.shared.logout()
     }
-    
+
     func goRolling() {
         let scene = RollingCounterScene.rolling
         let transition: SceneTransitionType = .present(scene: scene, animated: true)
-        let coordinator: SceneCoordinator = SceneCoordinator()
+        let coordinator = SceneCoordinator()
         coordinator.transition(type: transition)
     }
-    
+
     func seeMore() {
         let scene = SeeMoreScene.seeMore
         let transition: SceneTransitionType = .present(scene: scene, animated: true)
-        let coordinator: SceneCoordinator = SceneCoordinator()
+        let coordinator = SceneCoordinator()
         coordinator.transition(type: transition)
     }
 }

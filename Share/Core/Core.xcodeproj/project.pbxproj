@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		425152F0282BFCD900A74FD1 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425152EF282BFCD900A74FD1 /* View+Extension.swift */; };
 		42B2161C2832648600AFF65D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2161B2832648600AFF65D /* CustomTabBar.swift */; };
-		42B2161E283264D300AFF65D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2161D283264D300AFF65D /* Tab.swift */; };
+		42B2161E283264D300AFF65D /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2161D283264D300AFF65D /* Tabs.swift */; };
 		42B216202832655600AFF65D /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2161F2832655600AFF65D /* CustomTabView.swift */; };
 		42B2162328326FBA00AFF65D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2162228326FBA00AFF65D /* AppColor.swift */; };
 		42B216252832826E00AFF65D /* SceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B216242832826E00AFF65D /* SceneType.swift */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		425152EF282BFCD900A74FD1 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		42B2161B2832648600AFF65D /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
-		42B2161D283264D300AFF65D /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		42B2161D283264D300AFF65D /* Tabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		42B2161F2832655600AFF65D /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		42B2162228326FBA00AFF65D /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		42B216242832826E00AFF65D /* SceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneType.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		42CA3F3C281E80D60006EF9C /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				42B2161D283264D300AFF65D /* Tab.swift */,
+				42B2161D283264D300AFF65D /* Tabs.swift */,
 				42CA3F3D281E80E90006EF9C /* BundleIdentifier.swift */,
 				42F685D028300153004F8342 /* ViewLaunch.swift */,
 			);
@@ -356,7 +356,7 @@
 				42CA3F3E281E80E90006EF9C /* BundleIdentifier.swift in Sources */,
 				42ED336B281511E5003BA251 /* Encodable+Extension.swift in Sources */,
 				42C7DA812833E0570081F428 /* LoginManager.swift in Sources */,
-				42B2161E283264D300AFF65D /* Tab.swift in Sources */,
+				42B2161E283264D300AFF65D /* Tabs.swift in Sources */,
 				42ED3368281511E5003BA251 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				42ED3365281511E5003BA251 /* Encoder+Extension.swift in Sources */,
 				42ED33742815125D003BA251 /* CodableInfixOperator.swift in Sources */,
